@@ -1,32 +1,32 @@
 // src/components/homepage/FeaturedMentors.tsx
 import Image from 'next/image';
 import Link from 'next/link';
+import { client } from '@/lib/sanity'; // <-- Import the client
 
-// DUMMY DATA: Later, this will come from your Sanity CMS
-const mentors = [
-  {
-    name: 'Dr. Priya Sharma',
-    achievement: 'NEET 2023, AIR 12',
-    imageUrl: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg',
-  },
-  {
-    name: 'Rohan Verma',
-    achievement: 'UPSC CSE 2022, AIR 42',
-    imageUrl: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg',
-  },
-  {
-    name: 'Aditya Singh',
-    achievement: 'Software Engineer, Google',
-    imageUrl: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg',
-  },
-  {
-    name: 'Sameer Khan',
-    achievement: 'IIT Bombay, CSE \'24',
-    imageUrl: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg',
-  },
-];
+// Define the type for our mentor data
+interface Mentor {
+  _id: string;
+  name: string;
+  achievement: string;
+  imageUrl: string;
+}
 
-export const FeaturedMentors = () => {
+// Function to fetch the data
+async function getMentors() {
+  const query = `*[_type == "mentor"]{
+    _id,
+    name,
+    achievement,
+    "imageUrl": imageUrl.asset->url
+  }`;
+  const data = await client.fetch(query);
+  return data;
+}
+
+// Make the component async to fetch data
+export const FeaturedMentors = async () => {
+  const mentors: Mentor[] = await getMentors();
+
   return (
     <section className="bg-[#e9eae5] py-20">
       <div className="container mx-auto px-4">
@@ -34,10 +34,9 @@ export const FeaturedMentors = () => {
           Meet Some of Our Top Mentors
         </h2>
         
-        {/* Horizontal Scrolling Container */}
         <div className="mt-12 flex space-x-8 overflow-x-auto pb-6">
-          {mentors.map((mentor, index) => (
-            <div key={index} className="flex-shrink-0 w-64 bg-white rounded-lg shadow-lg text-center p-6">
+          {mentors.map((mentor) => (
+            <div key={mentor._id} className="flex-shrink-0 w-64 bg-white rounded-lg shadow-lg text-center p-6">
               <div className="relative h-24 w-24 mx-auto">
                 <Image
                   src={mentor.imageUrl}
