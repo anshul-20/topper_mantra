@@ -10,7 +10,7 @@ export const Navbar = () => {
       
         <Link href="/" className="flex items-center">
           {/* <Link href="/" className="logo-link"> */}
-            <Image src="/logo.png" alt="Topper Mantra" width={100} height={30} />
+            <Image src="/logo.png" alt="Topper Mantra" width={90} height={30} />
           {/* </Link> */}
         </Link>
 
@@ -31,7 +31,7 @@ export const Navbar = () => {
         </nav>
 
         {/* Right Side (CTA) */}
-        <Link href="/get-started" className="hidden sm:inline-block bg-[#E63E00] text-white font-semibold py-2 px-5 rounded-lg hover:bg-opacity-90 transition-all">
+        <Link href="/https://play.google.com/store/apps/details?id=com.support.toppers.mantra" className="hidden sm:inline-block bg-[#E63E00] text-white font-semibold py-2 px-5 rounded-lg hover:bg-opacity-90 transition-all">
           Get Started
         </Link>
         

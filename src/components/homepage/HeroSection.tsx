@@ -16,13 +16,13 @@ export const HeroSection = () => {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Link 
-              href="/aspirants-app-link" // <-- Replace with your Play Store link
+              href="https://play.google.com/store/apps/details?id=com.support.toppers.mantra" // <-- Replace with your Play Store link
               className="bg-[#FF5722] text-white font-bold py-3 px-8 rounded-lg text-center hover:scale-105 transition-transform"
             >
               Find My Mentor
             </Link>
             <Link 
-              href="/mentors-app-link" // <-- Replace with your Play Store link
+              href="https://play.google.com/store/apps/details?id=com.support.toppers.mantra.mentor" // <-- Replace with your Play Store link
               className="bg-transparent border-2 border-gray-400 text-gray-800 font-bold py-3 px-8 rounded-lg text-center hover:bg-gray-200 transition-colors"
             >
               Become a Mentor

@@ -49,7 +49,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Topper Mantra. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
