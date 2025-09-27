@@ -34,11 +34,14 @@ body {
 .scroller {
   display: flex;
   width: max-content;
-  animation: scroll 30s linear infinite;
+  animation: scroll 80s linear infinite; /* Slower animation */
 }
+
 
 @keyframes scroll {
   to {
     transform: translate(calc(-50%));
   }
 }
+
+
