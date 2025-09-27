@@ -10,7 +10,7 @@ export const FinalCTA = () => {
           Ready to Start Your Success Story?
         </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          Don't leave your success to chance. Get the expert guidance you need by downloading the app today. Your future self will thank you.
+          {`Don't leave your success to chance. Get the expert guidance you need by downloading the app today. Your future self will thank you.`}
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Replace with your actual Google Play Store badges/links */}

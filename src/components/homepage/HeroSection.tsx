@@ -9,7 +9,7 @@ export const HeroSection = () => {
         {/* Left Column: The Pitch */}
         <div className="text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#E63E00] leading-tight">
-            Unlock Your Potential. Learn from India's Best.
+            {`Unlock Your Potential. Learn from India's Best.`}
           </h1>
           <p className="mt-6 text-lg text-gray-700">
             Get personalized 1-on-1 mentorship from toppers and professionals who have already achieved your dream goal.
