@@ -1,5 +1,6 @@
 // src/components/layout/Footer.tsx
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const Footer = () => {
   return (
@@ -8,7 +9,9 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Column 1: Logo & Mission */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-2xl font-bold text-white">YourLogo</h3>
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.png" alt="Topper Mantra" width={100} height={30} />
+          </Link>
             <p className="mt-4 text-gray-400">
               Our mission is to connect every aspirant with the guidance they need to succeed.
             </p>
