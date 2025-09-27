@@ -34,6 +34,7 @@ export const Footer = () => {
           </div>
 
           {/* Column 4: Legal */}
+            {/* Column 4: Legal - UPDATED LINKS */}
           <div>
             <h4 className="font-semibold tracking-wider uppercase">Legal</h4>
             <nav className="mt-4 flex flex-col space-y-2">
