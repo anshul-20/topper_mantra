@@ -20,13 +20,13 @@ export const FeaturedMentorsSlider = ({ mentors }: { mentors: Mentor[] }) => {
 
   const scrollLeft = () => {
     if (scrollerRef.current) {
-      scrollerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+      scrollerRef.current.scrollBy({ left: -1500, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (scrollerRef.current) {
-      scrollerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollerRef.current.scrollBy({ left: 1500, behavior: 'smooth' });
     }
   };
 
