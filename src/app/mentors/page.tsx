@@ -63,7 +63,7 @@ export default function ForMentorsPage() {
       {/* Final CTA */}
       <section className="bg-[#FE6D4D] py-20 text-center text-white">
           <h2 className="text-3xl font-bold">Ready to Make an Impact?</h2>
-           <Link href="/https://play.google.com/store/apps/details?id=com.support.toppers.mantra.mentor" className="mt-8 inline-block">
+           <Link href="https://play.google.com/store/apps/details?id=com.support.toppers.mantra.mentor" className="mt-8 inline-block">
               <Image src="/google-play.png" alt="Get it on Google Play" width={180} height={60} />
           </Link>
       </section>

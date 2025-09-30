@@ -18,7 +18,7 @@ interface TestimonialData {
 }
 
 // This is the main interactive component
-export const TestimonialSlider = ({ testimonials }: { testimonials: TestimonialData[] }) => {
+const TestimonialSlider = ({ testimonials }: { testimonials: TestimonialData[] }) => {
   if (!testimonials || testimonials.length === 0) {
     return null;
   }
@@ -41,13 +41,13 @@ export const TestimonialSlider = ({ testimonials }: { testimonials: TestimonialD
           className="mySwiper"
         >
           {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial._id} className="text-center">
+            <SwiperSlide key={testimonial._id} className="text-center pb-12">
               <svg className="mx-auto h-12 w-12" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.33 8.213C9.33 6.088 10.537 4 12.637 4c2.1 0 3.307 2.088 3.307 4.213 0 2.125-1.207 4.25-3.307 4.25S9.33 10.338 9.33 8.213zm10 0c0-2.125 1.207-4.213 3.307-4.213 2.1 0 3.307 2.088 3.307 4.213 0 2.125-1.207 4.25-3.307 4.25S19.33 10.338 19.33 8.213zM4 28h24v-4H4v4zm0-6h24v-4H4v4zm0-6h24v-4H4v4z" />
               </svg>
-              <p className="mt-6 text-2xl md:text-3xl font-light italic h-40">
+              <div className="mt-6 text-2xl md:text-3xl font-light italic h-40">
                 &ldquo;{testimonial.quote}&rdquo;
-              </p>
+              </div>
               <p className="mt-6 text-xl font-semibold">
                 - {testimonial.authorName}, {testimonial.authorTitle}
               </p>

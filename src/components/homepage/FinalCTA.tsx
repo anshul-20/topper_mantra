@@ -18,13 +18,15 @@ export const FinalCTA = () => {
           
           {/* Aspirant App Card */}
           <div className="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center">
-            {/* You will need to create/find an icon for the aspirant app */}
-            <Image 
-              src="/icons/aspirant.png" // <-- Placeholder path
-              alt="Aspirant App Icon"
-              width={64}
-              height={64}
-            />
+            {/* Added div for circular icon background */}
+            <div className="bg-white rounded-full p-4 shadow-md"> 
+              <Image 
+                src="/icons/aspirant.png"
+                alt="Aspirant App Icon"
+                width={64}
+                height={64}
+              />
+            </div>
             <h3 className="mt-4 text-2xl font-bold text-gray-800">For Aspirants</h3>
             <p className="mt-2 text-gray-600">Find your mentor and start learning.</p>
             <Link href="https://play.google.com/store/apps/details?id=com.support.toppers.mantra" className="mt-6">
@@ -34,16 +36,19 @@ export const FinalCTA = () => {
 
           {/* Mentor App Card */}
           <div className="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center">
-            {/* You will need to create/find an icon for the mentor app */}
-            <Image 
-              src="/icons/mentor.png" // <-- Placeholder path
-              alt="Mentor App Icon"
-              width={64}
-              height={64}
-            />
+            {/* Added div for circular icon background */}
+            <div className="bg-white rounded-full p-4 shadow-md">
+              <Image 
+                src="/icons/mentor.png"
+                alt="Mentor App Icon"
+                width={64}
+                height={64}
+              />
+            </div>
             <h3 className="mt-4 text-2xl font-bold text-gray-800">For Mentors</h3>
             <p className="mt-2 text-gray-600">Share your expertise and start earning.</p>
-            <Link href="/https://play.google.com/store/apps/details?id=com.support.toppers.mantra.mentor" className="mt-6">
+            {/* Fix: removed leading slash from Link href as it was causing an invalid URL structure */}
+            <Link href="https://play.google.com/store/apps/details?id=com.support.toppers.mantra.mentor" className="mt-6"> 
               <Image src="/google-play.png" alt="Get it on Google Play" width={180} height={60} />
             </Link>
           </div>
