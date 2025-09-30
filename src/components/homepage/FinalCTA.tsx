@@ -21,7 +21,7 @@ export const FinalCTA = () => {
             {/* Added div for circular icon background */}
             <div className="bg-white rounded-full p-4 shadow-md"> 
               <Image 
-                src="/icons/aspirant.png"
+                src="/icons/aspirant.jpeg"
                 alt="Aspirant App Icon"
                 width={64}
                 height={64}
@@ -39,7 +39,7 @@ export const FinalCTA = () => {
             {/* Added div for circular icon background */}
             <div className="bg-white rounded-full p-4 shadow-md">
               <Image 
-                src="/icons/mentor.png"
+                src="/icons/mentor.jpeg"
                 alt="Mentor App Icon"
                 width={64}
                 height={64}
